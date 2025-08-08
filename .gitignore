@@ -22,7 +22,6 @@ Thumbs.db
 *.log
 
 # Large data/models
-*.pkl
 *.joblib
 *.csv
 *.tsv
