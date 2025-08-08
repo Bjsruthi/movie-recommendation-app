@@ -3,10 +3,20 @@ import pickle
 import pandas as pd
 import requests
 
-# def fetch_poster(movie_id):
-    # response = requests.get("https://api.themoviedb.org/3/movie/{}?api_key=a6e3e03d428b618794b41458226477dd&language=en-us".format(movie_id))
-    # data = response.json()
-    # return "https://image.tmdb.org/t/p/w500/" + data['poster_path']
+import os
+
+# Dropbox direct download link
+DROPBOX_URL = "https://www.dropbox.com/scl/fi/30mh1keboatmtv6e57cw3/similarity.pkl?rlkey=6myzg6rf7fuimzmy7tpebkmlr&st=rq4ezxkj&dl=1"
+LOCAL_FILE = "similarity.pkl"
+
+# Download if not already present
+if not os.path.exists(LOCAL_FILE):
+    print("Downloading similarity.pkl from Dropbox...")
+    r = requests.get(DROPBOX_URL, stream=True)
+    with open(LOCAL_FILE, 'wb') as f:
+        for chunk in r.iter_content(chunk_size=8192):
+            f.write(chunk)
+    print("Download complete.")
 
 def fetch_poster(movie_id):
     api_key = "a6e3e03d428b618794b41458226477dd"
