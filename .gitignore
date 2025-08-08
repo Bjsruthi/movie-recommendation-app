@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual env
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Large data/models
+*.pkl
+*.joblib
+*.csv
+*.tsv
+*.json
+*.h5
+
+# Heroku
+setup.sh
