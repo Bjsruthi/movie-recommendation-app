@@ -20,8 +20,7 @@ It suggests similar movies based on **cosine similarity** of movie metadata, fet
 
 ## 📸 Demo Preview  
 
-
-![<img width="1489" height="662" alt="image" src="https://github.com/user-attachments/assets/90d15de5-61f1-46eb-a864-7732cc959d1e" />](https://via.placeholder.com/900x400.png?text=Add+Screenshot+Here)  
+<img width="1258" height="664" alt="image" src="https://github.com/user-attachments/assets/3122d6de-57f5-4999-b761-9ed37d319f5a" />
 
 ---
 
@@ -52,3 +51,13 @@ api_key = "YOUR_API_KEY"
 ```bash
 streamlit run app.py
 ```
+
+---
+
+## 🖥️ Usage
+
+1. When the app launches in your browser, select a movie from the dropdown menu.  
+2. Click the **"Recommend"** button.  
+3. The app will display the top 5 most similar movies along with their posters and details fetched from TMDB.
+
+---
