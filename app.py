@@ -19,7 +19,9 @@ if not os.path.exists(LOCAL_FILE):
     print("Download complete.")
 
 def fetch_poster(movie_id):
-    api_key = "a6e3e03d428b618794b41458226477dd"
+    from dotenv import load_dotenv
+    load_dotenv()
+    api_key = os.getenv("TMDB_API_KEY")
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
     response = requests.get(url)
     data = response.json()
